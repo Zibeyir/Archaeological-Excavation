@@ -1,0 +1,2 @@
+GERI=Geri
+Şəkil=Şəkil

@@ -1,0 +1,2 @@
+﻿GERI=Back
+Şəkil=Picture
