@@ -16,7 +16,7 @@ public class PictureColor : MonoBehaviour
     void Update()
     {
 
-        image.color = new Color(1, 1, 1, (scale.localScale.x - 0.3f) * 2);
+        image.color = new Color(1, 1, 1, (scale.localScale.x - 0.5f) * 2);
        
     }
 }

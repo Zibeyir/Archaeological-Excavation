@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public LangDropDown langDropDown;
 
     [Header("Canvases")]
     public StartCanvas StartCanvasScript;
     public MainCanvas MainCanvasScript;
     public List<MainButtonsStructure> mainButtonsStructures;
+    public void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         mainButtonsStructures = new List<MainButtonsStructure>();
@@ -27,9 +32,9 @@ public class GameManager : MonoBehaviour
         StartCanvasScript.StartCanvasClose();
     }
 
-    public void ButtonMainButtons()
+    public void ButtonMainButtons(MainButtonBool mainButtonBool)
     {
-        MainCanvasScript.SelectMainButton();
+        MainCanvasScript.SelectMainButton(mainButtonBool);
     }
 
     public void ButtonBack()
